@@ -114,9 +114,9 @@ def is_palindrome(string):
     right_idx = len(cleared_string) - 1
     for left_idx in range(len(cleared_string)):
       if cleared_string[left_idx] != cleared_string[right_idx]:
-        return False
+        return "NO"
       right_idx -= 1
-    return True
+    return "YES"
 
 """# 6
 Написать функцию ```calculate```, которая принимает на вход текстовый файл содержащий строки следующего формата:
