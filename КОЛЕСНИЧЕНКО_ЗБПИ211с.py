@@ -110,7 +110,7 @@ YES
 """
 
 def is_palindrome(string):
-    cleared_string = string.replace(" ", "").replace(",","").replace("'","").replace(".","").lower()
+    cleared_string = string.replace(" ", "").replace("-", "").replace(",","").replace("'","").replace(".","").replace("!","").replace("—", "").replace("-","").replace("–","").lower()
     right_idx = len(cleared_string) - 1
     for left_idx in range(len(cleared_string)):
       if cleared_string[left_idx] != cleared_string[right_idx]:
@@ -312,10 +312,10 @@ def decode_ch(sting_of_elements):
 
 class Student:
   
-  def __init__(self, name=None, surname=None, fullname=None, grades=[3,4,5]):
+  def __init__(self, name=None, surname=None, grades=[3,4,5]):
     self.name = name
     self.surname = surname
-    self.fullname = fullname
+    self.fullname = f"{name} {surname}"
     self.grades = grades
 
   def greeting(self):
