@@ -272,6 +272,7 @@ NOTiFICaTiON
 
 
 """
+import json
 
 periodic_table = json.load(open('periodic_table.json'))
 
